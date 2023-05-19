@@ -1,0 +1,80 @@
+* {
+    box-sizing: border-box;
+}
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.site-main {
+    flex-grow: 1;
+}
+.sky {
+    position: relative;
+    height: 32%;
+    background-color: skyblue;
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+}
+.cloudf {
+    top: 55px;
+    position: absolute;
+    animation-name: marioAnimation;
+    animation-duration: 12s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+}
+.clouds {
+    animation-name: marioAnimation;
+    animation-duration: 15s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+}
+.grass {
+    height: 32%;
+    background-color: green;
+}
+.road {
+    position: relative;
+    height: 35%;
+    background-color: grey;
+}
+.mario {
+    position: absolute;
+    top: -30px;
+    animation-name: marioAnimation;
+    animation-duration: 8s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.line {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    border-top: dashed 10px white;
+}
+.luigi {
+    position: absolute;
+    bottom: 10px;
+    animation-name: marioAnimation;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes marioAnimation {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(1500px);
+    }
+}
